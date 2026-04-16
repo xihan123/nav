@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --hue: 253;
+
+  --color-accent-50:  oklch(0.97 0.02 var(--hue));
+  --color-accent-100: oklch(0.93 0.05 var(--hue));
+  --color-accent-200: oklch(0.85 0.10 var(--hue));
+  --color-accent-300: oklch(0.75 0.14 var(--hue));
+  --color-accent-400: oklch(0.65 0.18 var(--hue));
+  --color-accent-500: oklch(0.55 0.20 var(--hue));
+  --color-accent-600: oklch(0.45 0.18 var(--hue));
+
+  --color-surface-0: oklch(0.16 0.014 var(--hue));
+  --color-surface-1: oklch(0.23 0.015 var(--hue));
+  --color-surface-2: oklch(0.27 0.015 var(--hue));
+  --color-surface-3: oklch(0.30 0.015 var(--hue));
+
+  --color-primary: oklch(0.75 0.14 var(--hue));
+
+  --color-text-primary:   rgba(255, 255, 255, 0.90);
+  --color-text-secondary: rgba(255, 255, 255, 0.75);
+  --color-text-muted:     rgba(255, 255, 255, 0.50);
+  --color-text-faint:     rgba(255, 255, 255, 0.30);
+
+  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+
+
+  --font-family-sans: 'system-ui', 'Roboto', 'Segoe UI', sans-serif;
+}
+
+:root {
+  --radius-large: 1rem;
+  --color-hover-bg: oklch(0.28 0.02 var(--hue));
+}
+
+html {
+  background-color: var(--color-surface-0);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.card-base {
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  overflow: hidden;
+}
+
+.card-hover {
+  transition: background-color 0.2s ease;
+}
+.card-hover:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.card-interactive {
+  transition: border-color 0.2s ease, transform 0.1s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+.card-interactive:hover {
+  border-color: var(--color-border-hover);
+  background-color: var(--color-hover-bg);
+}
+.card-interactive:active {
+  transform: scale(0.985);
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+.badge-pill:hover {
+  background-color: var(--color-surface-3);
+  color: var(--color-text-primary);
+}
+.badge-pill:active {
+  transform: scale(0.97);
+}
+
+.btn-press {
+  transition: transform 0.1s ease;
+}
+.btn-press:active {
+  transform: scale(0.95);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-300px) translateY(300px);
+    opacity: 0;
+  }
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
