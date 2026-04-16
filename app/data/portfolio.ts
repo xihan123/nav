@@ -82,6 +82,26 @@ export const websites: Website[] = [
         description: 'Doro Sticker Collection',
         url: 'https://doro.xihan.website'
     },
+    {
+        name: 'PDF工具箱',
+        description: 'Stirling PDF',
+        url: 'https://pdf.xihan.website'
+    },
+    {
+        name: '实时心率监测系统',
+        description: '小米手环心率服务',
+        url: 'https://public-heart-rate-api.xihan.website'
+    },
+    {
+        name: '在线音频转 WAV 格式',
+        description: '支持拖入文件/文件夹，自动将音频转为 WAV 格式，时长不足 30 秒自动重复拼接',
+        url: 'https://wav.xihan.website'
+    },
+    {
+        name: '在线反诈海报设计',
+        description: '反诈宣传的在线海报制作工具',
+        url: 'https://gxfz.xihan.website'
+    },
 ]
 
 export const sponsors: Sponsor[] = [
