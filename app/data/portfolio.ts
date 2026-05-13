@@ -31,6 +31,7 @@ export const pinnedRepos: PinnedRepo[] = [
     {name: 'WordExtractor', url: 'https://github.com/xihan123/WordExtractor', cardImg: PIN('WordExtractor')},
     {name: 'TurboHash', url: 'https://github.com/xihan123/TurboHash', cardImg: PIN('TurboHash')},
     {name: 'MyLanServer', url: 'https://github.com/xihan123/MyLanServer', cardImg: PIN('MyLanServer')},
+    {name: 'Signature', url: 'https://github.com/xihan123/signature', cardImg: PIN('signature')},
 ]
 
 export const techCategories: TechCategory[] = [
@@ -101,6 +102,11 @@ export const websites: Website[] = [
         name: '在线反诈海报设计',
         description: '反诈宣传的在线海报制作工具',
         url: 'https://gxfz.xihan.website'
+    },
+    {
+        name: '手写签名',
+        description: '在线手写签名图片制作',
+        url: 'https://signature.xihan.website'
     },
 ]
 
