@@ -32,6 +32,9 @@ export const pinnedRepos: PinnedRepo[] = [
     {name: 'TurboHash', url: 'https://github.com/xihan123/TurboHash', cardImg: PIN('TurboHash')},
     {name: 'MyLanServer', url: 'https://github.com/xihan123/MyLanServer', cardImg: PIN('MyLanServer')},
     {name: 'Signature', url: 'https://github.com/xihan123/signature', cardImg: PIN('signature')},
+    {name: 'Florida', url: 'https://github.com/xihan123/Florida', cardImg: PIN('Florida')},
+    {name: 'jebmcp', url: 'https://github.com/xihan123/jebmcp', cardImg: PIN('jebmcp')},
+    {name: 'florida-push', url: 'https://github.com/xihan123/florida-push', cardImg: PIN('florida-push')},
 ]
 
 export const techCategories: TechCategory[] = [
